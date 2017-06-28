@@ -1,4 +1,4 @@
-// Emulate a double array using chars
+// Emulate a double array using char array
 
 #include <stdio.h>
 #include <stdlib.h>

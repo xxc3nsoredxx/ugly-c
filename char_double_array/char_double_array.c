@@ -5,7 +5,6 @@
 
 int main () {
     char *array = malloc (2 * sizeof (double));
-    double d1, d2;
     
     // Read 2 doubles
     printf ("Enter two doubles: ");

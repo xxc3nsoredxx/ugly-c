@@ -2,8 +2,6 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
-#include <unistd.h>
 
 int main () {
     char *array = malloc (2 * sizeof (double));
@@ -11,10 +9,8 @@ int main () {
     
     // Read 2 doubles
     printf ("Enter two doubles: ");
-    scanf ("%lf %lf", &d1, &d2);
-    memcpy (array, &d1, sizeof (double));
-    memcpy (array + sizeof (double), &d2, sizeof (double));
-    printf ("%d.%d\n", (int) *((double *)array), (int) (*((double *)(array + sizeof (double))) * 100));
+    scanf ("%lf %lf", (double *)array, (double *)(array + sizeof (double)));
+    printf ("%lf %lf\n", *((double *)array), *((double *)(array + sizeof (double))));
 
     free (array);
 }
